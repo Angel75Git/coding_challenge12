@@ -58,7 +58,7 @@ const totalLists = document.getElementById("inventoryList")
 
 //adding function called by clicking button
 function addInventoryItem(product) {
-    listElem = document.createElement("li")
+    const listElem = document.createElement("li")
 
     listElem.setAttribute("class", "product-item")
 
@@ -82,5 +82,8 @@ function addInventoryItem(product) {
 
 function deleteInventoryItem(listItem){
     totalLists.removeChild(listItem)
-    
 }
+
+//Task 4
+console.log("=".repeat(20));
+console.log("Task 4");
