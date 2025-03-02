@@ -87,3 +87,38 @@ function deleteInventoryItem(listItem){
 //Task 4
 console.log("=".repeat(20));
 console.log("Task 4");
+
+//Making three child elements with class customer-card
+const customerSection = document.getElementById("customerSection");
+
+const customer1 = document.createElement("div"); //div creation
+const customer2 = document.createElement("div");
+const customer3 = document.createElement("div");
+
+customer1.setAttribute("class", "customer-card"); //set attributes
+customer2.setAttribute("class", "customer-card");
+customer3.setAttribute("class", "customer-card");
+
+customer1.innerHTML = "Customer 1"
+customer2.innerHTML = "Customer 2"  //Placeholder name
+customer3.innerHTML = "Customer 3"
+
+customerSection.appendChild(customer1)
+customerSection.appendChild(customer2)
+customerSection.appendChild(customer3)
+
+//finished creating child divs as customers
+
+const customersCards = document.querySelectorAll('.customer-card')
+// function to message customer section
+customerSection.addEventListener("click", function() {
+    console.log("Customer section clicked");
+});
+//function for customer divs
+customersCards.forEach(card => {
+    card.addEventListener('click', (event) => {
+        console.log("Customer Card is clicked");
+        event.stopPropagation(); //You can comment this out to see that both messages pop in console     
+    })
+})
+
