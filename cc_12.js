@@ -48,3 +48,39 @@ console.log(nodeListArray); //converting nodelist to array
 nodeListArray.forEach(card => {
     card.style.background = "lightgreen"; //changing background color of cards
 });
+
+
+//Task 3
+console.log("=".repeat(20));
+console.log("Task 3");
+//capturing id with variable
+const totalLists = document.getElementById("inventoryList")
+
+//adding function called by clicking button
+function addInventoryItem(product) {
+    listElem = document.createElement("li")
+
+    listElem.setAttribute("class", "product-item")
+
+    if (product === "Laptop") {
+        listElem.innerHTML = "<p>Laptop</p>"
+        listElem.setAttribute("id", "laptopId") //used for other function
+    }  //using if statements to match which buttons are clicked
+    
+    if (product ==="Smartphone") {
+        listElem.innerHTML = "<p>SmartPhone</p>"
+        listElem.setAttribute("id", "phoneId") //used for other function
+    }
+    listElem.addEventListener("click", function() {
+        deleteInventoryItem(listElem)
+    })
+
+    totalLists.appendChild(listElem)
+}
+
+//Function to delete one either laptop or smartphone
+
+function deleteInventoryItem(listItem){
+    totalLists.removeChild(listItem)
+    
+}
