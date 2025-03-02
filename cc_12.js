@@ -3,7 +3,7 @@ console.log("=".repeat(20));
 console.log("Task 1");
 
 const metricDiv = document.getElementById("dashboard"); // Saving element "dashboard"
-const sameDiv = document.querySelector("dashboard");    // to variables
+const sameDiv = document.querySelector("#dashboard");    // to variables
 
 const revenueMetric = document.createElement("div");    
 revenueMetric.setAttribute("class", "metric-card");   //Assigning revenueMetric:
